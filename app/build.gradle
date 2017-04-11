@@ -66,6 +66,12 @@ android {
             abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips'
         }
 
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_TOOLCHAIN=gcc"
+            }
+        }
+
         testApplicationId "org.connectbot.tests"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
